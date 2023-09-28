@@ -1,0 +1,208 @@
+body {
+    background-image: url('https://wallpapertag.com/wallpaper/middle/3/7/6/174164-download-free-dark-grey-background-1920x1080-computer.jpg');
+    
+    height: 900px;}
+
+    
+    .card {
+        margin-left: 40px;
+        margin-top: 2%;
+        width: 90%;
+        border-radius: 20px;
+        background: #a17d7d;
+        position: relative;
+        padding: 1.8rem;
+        border: 2px solid #c3c6ce;
+        transition: 0.5s ease-out;
+        overflow: visible;
+       }
+       
+       .card-details {
+        padding: 20px , 20px , 20px , 20px;
+        color: rgb(255, 255, 255);
+        height: 100%;
+        gap: .5em;
+        place-content: center;
+        font-weight: 700;
+       }
+
+
+       
+      
+
+
+
+       
+       .text-body {
+        color: rgb(134, 134, 134);
+       }
+       
+       /*Text*/
+       .text-title {
+        font-size: 1.5em;
+        
+       }
+       
+      
+       
+      /*  .card:hover .card-button {
+        transform: translate(-50%, 40%);
+        opacity: 1;
+       }
+ 
+       .card:hover .car-button {
+        transform: translate(-50%, 40%);
+        opacity: 1;
+       }
+*/
+     table
+
+       th{
+        width: 250px;
+        text-align: center;
+        color: #0f0f0f;
+       }
+
+       td{
+        width: 250px;
+        text-align: center;
+        
+       }
+
+/* 
+       @keyframes colorAnimation {
+        0% {
+          color: rgb(17, 255, 0);
+        }
+        50% {
+          color: rgb(255, 255, 255);
+        }
+        100% {
+          color: rgb(38, 255, 0);
+        }
+      }
+      
+      p {
+        animation-name: colorAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }*/
+
+
+      .invoiceNo{
+
+    color: #191b1b;
+      }
+
+      h1{
+        color: #000000;
+        text-align: center;
+        font-weight: 600;
+      }
+
+
+      .under{
+        margin-top: 30px;
+        margin-bottom: -20px;
+      }
+/*comfirem */
+      .btn {
+        position: relative;
+        font-size: 17px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1em 2.5em;
+        display: inline-block;
+        border-radius: 6em;
+        transition: all .2s;
+        border: none;
+        font-family: inherit;
+        font-weight: 500;
+        color: black;
+        background-color: rgb(15, 114, 48);
+       }
+       
+       .btn:hover {
+        transform: translateY(-3px); 
+        background-color: rgb(25, 165, 34);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+       }
+       
+       .btn:active {
+         transform: translateY(-1px);
+        
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+       }
+       
+       .btn::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+       }
+       
+       .btn::after {
+        background-color: #235525;
+       }
+       
+       .btn:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+       }
+
+
+/*cencel btn*/
+       .btn2{
+        position: relative;
+        font-size: 17px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1em 2.5em;
+        display: inline-block;
+        border-radius: 6em;
+        transition: all .2s;
+        border: none;
+        font-family: inherit;
+        font-weight: 500;
+        color: black;
+        background-color: rgb(128, 5, 5);
+       }
+       
+       .btn2:hover {
+        transform: translateY(-3px);
+        background-color: rgb(131, 41, 41);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+       }
+       
+       .btn2:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+       }
+       
+       .btn2::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+       }
+       
+       .btn2::after {
+        background-color: #d44949;
+       }
+       
+       .btn2:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+       }

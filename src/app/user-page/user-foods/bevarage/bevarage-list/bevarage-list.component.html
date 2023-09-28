@@ -1,0 +1,35 @@
+
+<br><br><br><br><br>
+<div class="container" >
+       
+    <div class="row justify-content-center"  >
+        <div *ngFor="let bevarage of bevarage"class="col-md-6 col-lg-4 mb-30" >
+         
+            <div class="team-item" >
+                
+                <div class="mb-30 position-relative d-flex align-items-center">
+                    <span class="img-holder d-inline-block">
+                        <img [src]= "bevarage.imageURL" alt="" class="img-responsive"  height="200px">
+                       
+                    </span>
+            </div>
+     
+           <div class="team-content">
+                <h6 class="mb-2" > {{bevarage.name}}</h6>
+                <p class="text-uppercase mb-0">Rs.{{bevarage.price}}</p>
+                <p class="text-uppercase mb-0">{{bevarage.details}}</p>
+                <div class="Content">
+                    <button type="button" class="btn" (click)="inc(bevarage)"><i class="fa fa-plus"></i></button>
+                    <span>{{bevarage.quantity}}</span>
+                    <button type="button" class="btn" (click)="dec(bevarage)"><i class="fa fa-minus"></i></button>
+                        </div>
+                        &nbsp;
+                <button class="button" type="submit" (click)="addToCart(bevarage)">Add To Cart</button>
+               
+            </div>
+        
+        </div>
+   
+    </div>
+    
+</div>      

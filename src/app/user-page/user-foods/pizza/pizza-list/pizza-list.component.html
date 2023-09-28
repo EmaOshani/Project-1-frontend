@@ -1,0 +1,27 @@
+<br><br><br><br><br>
+<div class="container" >
+       
+    <div class="row justify-content-center"  >
+        <div *ngFor="let pizza of pizzas"class="col-md-6 col-lg-4 mb-30" >
+         
+            <div class="team-item" >
+                
+                <div class="mb-30 position-relative d-flex align-items-center">
+                    <span class="img-holder d-inline-block">
+                        <img [src]= "pizza.imageURL"  (click)="detailsPizza(pizza.id)" alt="" class="img-responsive"  height="200px">
+                       
+                    </span>
+            </div>
+     
+           <div class="team-content">
+                <h6 class="mb-2" > {{pizza.name}}</h6>
+                <p class="text-uppercase mb-0">Rs.{{pizza.smallprice}}</p>
+                <button class="button" type="submit" (click)="detailsPizza(pizza.id)">Customize</button>
+                <!--<p class="text-uppercase mb-0">{{pizza.details}}</p>-->
+            </div>
+        
+        </div>
+   
+    </div>
+    
+</div>             

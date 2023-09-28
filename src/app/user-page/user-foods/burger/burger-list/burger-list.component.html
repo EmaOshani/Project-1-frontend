@@ -1,0 +1,36 @@
+
+<br><br><br><br><br>
+<div class="container" >
+       
+    <div class="row justify-content-center"  >
+        <div *ngFor="let burgers of burgers"class="col-md-6 col-lg-4 mb-30" >
+         
+            <div class="team-item" >
+                
+                <div class="mb-30 position-relative d-flex align-items-center">
+                    <span class="img-holder d-inline-block">
+                        <img [src]= "burgers.imageURL" alt="" class="img-responsive"  height="200px">
+                       
+                    </span>
+            </div>
+     
+           <div class="team-content">
+                <h6 class="mb-2" > {{burgers.name}}</h6>
+                <p class="text-uppercase mb-0">Rs.{{burgers.price}}</p>
+                <p class="text-uppercase mb-0">{{burgers.details}}</p>
+                
+                <div class="Content">
+                    <button type="button" class="btn" (click)="inc(burgers)"><i class="fa fa-plus"></i></button>
+                    <span>{{burgers.quantity}}</span>
+                    <button type="button" class="btn" (click)="dec(burgers)"><i class="fa fa-minus"></i></button>
+                        </div>
+                        &nbsp;
+                <button class="button" type="submit" (click)="addToCart(burgers)">Add To Cart</button>
+               
+            </div>
+        
+        </div>
+   
+    </div>
+    
+</div>      

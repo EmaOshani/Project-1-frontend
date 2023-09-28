@@ -1,0 +1,266 @@
+/*@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); 
+
+
+}*/
+
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); 
+
+.nav-bar{
+    left: 0px;
+    width: 100%;
+    height: 94px;
+    position : fixed;
+    display: block;
+    z-index: 9999;
+
+}
+
+header{
+    
+    padding:9px ;
+    background:rgb(185, 47, 47);
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62%;
+    text-align: center;
+    
+
+}
+
+header h4{
+   
+    color:#fff;
+    cursor:pointer;
+}
+
+header h4:focus{
+    outline:none;
+    border:none;
+}
+
+.cart_icon{
+    position: absolute;
+    cursor:pointer;
+    left: 93%;
+    top: 40%;
+}
+
+.cart_icon:focus{
+    outline:none;
+    border:none;
+}
+
+.cart_iconi{
+    font-size:24px;
+    color:#fff;
+}
+
+.cart_value{
+    position:absolute;
+    top:-15px;
+    right:-32px;
+ 
+    border-radius:50%;
+    padding:4px 10px;
+    font-weight:800;
+    font-size:18px;
+    
+}
+
+.puka{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #e9f3ed;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  } 
+
+  /*irak buttun eka*/
+  button {
+    font-size: 18px;
+    color: white;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    top:25%;
+  }
+  
+  button:focus,
+  button:hover {
+    color: #fff;
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  .FB{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 20px;
+    top : 34%;
+    width:  150px;
+    
+    
+  }
+
+  .col-md-3{
+    left: 100%;
+  }
+   .puca{
+
+    position: absolute;
+    left: 1%;
+   }
+
+
+  .Fb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+   
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(to top, #ad4343 0%, #8a1616 80%, #e44848 100%);
+    border-radius: 20px;
+    border: 1px solid #f3ebed;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    color: #d84848;
+    text-shadow: 0 1px #c22323;
+  }
+  
+  .Fb:hover {
+    box-shadow: 0 4px 3px 1px #d15959, 0 6px 8px #c27a7a, 0 -4px 4px #bd6b71, 0 -6px 4px #b95d5d, inset 0 0 3px 3px #8d2c06;
+  }
+  
+  .Fb:active {
+    box-shadow: 0 4px 3px 1px #a86666, 0 6px 8px #a16666, 0 -4px 4px #cf3737, 0 -6px 4px #d12d2d, inset 0 0 5px 3px #8a3333, inset 0 0 30px #f01c1c;
+  }
+  
+  .Fb:focus {
+    box-shadow: 0 4px 3px 1px #af2323, 0 6px 8px #dd4343, 0 -4px 4px #92293a, 0 -6px 4px #7c3333, inset 0 0 5px 3px #944949, inset 0 0 30px #882323;
+  }
+  
+  
+  
+
+
+
+.InfoBtn{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 20px;
+    top : 34%;
+    
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(to top, #ad4343 0%, #8a1616 80%, #e44848 100%);
+    border-radius: 30px;
+    border: 1px solid #e9e1e2;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    left: -5px;
+    color: #d84848;
+    text-shadow: 0 1px #c22323;
+  }
+  
+  .info:hover {
+    box-shadow: 0 4px 3px 1px #d15959, 0 6px 8px #c27a7a, 0 -4px 4px #b45a62, 0 -6px 4px #b95d5d, inset 0 0 3px 3px #8d2c06;
+  }
+  
+  .info:active {
+    box-shadow: 0 4px 3px 1px #a86666, 0 6px 8px #d46262, 0 -4px 4px #cf3737, 0 -6px 4px #d12d2d, inset 0 0 5px 3px #8a3333, inset 0 0 30px #f01c1c;
+  }
+  
+  .info:focus {
+    box-shadow: 0 4px 3px 1px #af2323, 0 6px 8px #dd4343, 0 -4px 4px #92293a, 0 -6px 4px #7c3333, inset 0 0 5px 3px #944949, inset 0 0 30px #882323;
+  }
+  
+
+
+ 
+  
+  
+  

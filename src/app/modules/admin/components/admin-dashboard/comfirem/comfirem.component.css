@@ -1,0 +1,234 @@
+body {
+    background-image: url('https://wallpapertag.com/wallpaper/middle/3/7/6/174164-download-free-dark-grey-background-1920x1080-computer.jpg');
+    
+    height: 900px;}
+
+    
+    .card {
+        margin-left: 40px;
+        margin-top: 2%;
+        width: 90%;
+        border-radius: 20px;
+        background: #7a4e4e;
+        position: relative;
+        padding: 1.8rem;
+        border: 2px solid #c3c6ce;
+        transition: 0.5s ease-out;
+        overflow: visible;
+       }
+       
+       .card-details {
+        padding: 20px , 20px , 20px , 20px;
+        color: rgb(255, 255, 255);
+        height: 100%;
+        gap: .5em;
+        place-content: center;
+        font-weight: 700;
+       }
+
+
+       /* button*/
+       
+         .card-button {
+        
+        text-align: center;
+        transform: translate(-50%, 125%);
+        width: 15%;
+        border-radius: 90px;
+        border: none;
+        background-color: #ff0000;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        padding: .5rem 1rem;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.3s ease-out;
+       }  
+
+
+     
+
+       .card-button:hover {
+        transform: translate(-50%, 125%);
+        width: 15%;
+        border-radius: 30px;
+        border: none;
+        background-color: #8c0000;
+        color: #fff;
+        font-size: 14px;
+        padding: .5rem 1rem;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.3s ease-out;
+       }  
+
+
+   
+
+
+
+
+
+       
+       .text-body {
+        color: rgb(134, 134, 134);
+       }
+       
+       /*Text*/
+       .text-title {
+        font-size: 1.5em;
+        font-weight: bold;
+       }
+       
+       
+       .card:hover .card-button {
+        transform: translate( -50%, 20%);
+        opacity: 1;
+       }
+
+     table
+
+       th{
+        width: 250px;
+        text-align: center;
+        color: #000000;
+       }
+
+       td{
+        width: 250px;
+        text-align: center;
+        
+       }
+
+
+     
+      
+      
+
+
+      .invoiceNo{
+
+    color: #000000;
+      }
+
+      h1{
+        color: #000000;
+        text-align: center;
+      }
+
+
+      .under{
+        margin-top: 30px;
+        margin-bottom: -20px;
+      }
+
+
+.container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input {
+  width: 200px;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  background-color: transparent;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+.userName{
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  
+}
+
+
+
+.thinkingImage{
+
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+.button {
+  position: relative;
+  width: 170px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #79171f;
+  background-color: #6d1010;
+  overflow: hidden;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  left: 20px;
+  background-color: #791717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: #fff;
+}
+
+.button:hover {
+  background: #79171c;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #146c54;
+}
+
+.button:active {
+  border: 1px solid #146c54;
+}

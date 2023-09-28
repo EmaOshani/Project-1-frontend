@@ -1,0 +1,62 @@
+
+
+        <header class="nav-bar">
+            <div class="container">
+                <div class="row">
+
+                    <div class="row">
+                        <div class="col-md-3">
+            <a routerLinkActive="active" class="nav-link"><img src="assets\images\realpizza-logo.png" height="70px" class="puca" (click)="onHome()"></a>
+                        </div>
+       
+       
+
+        <div class="col-md-1">
+            <button
+                (click)="onmenu()" class="nav-link">
+                Menu
+            </button>
+            </div>
+
+            <div class="col-md-2">
+                <button
+                       (click)="onContact()" class="nav-link">
+                    Contact Us
+                </button>
+                </div>
+
+                <div class="col-md-1">
+                    <a href="https://www.facebook.com/RealPizza.Srilanka">
+                    
+                        <button class="Fb">
+                        <i class="fa fa-facebook FB" aria-hidden="true" ></i>
+                    </button>
+                    </a>
+                    </div>
+
+                       
+                    <div class="col-md-1">
+                        <button class="info" (click)="onabout()">
+                        <i class="fa fa-info InfoBtn" aria-hidden="true"></i>
+                        </button>
+                        </div>
+    
+                    
+            <div class="col-md-6 text-right">
+                <div class="cart_icon" (click)="onCart()" >
+                    <i class="fa fa-shopping-cart puka" >
+                    </i>
+                    <div style="color: white;" class="cart_value" (click)="onCart()">
+                        {{cartItem}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+         
+            </div></header>
+
+
+            

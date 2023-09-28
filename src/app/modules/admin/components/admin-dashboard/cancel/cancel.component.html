@@ -1,0 +1,68 @@
+
+
+    <br>
+    <h1>Canceled Orders</h1>
+    <br>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="card" *ngFor="let item of filteredItems"  >
+        <div class="card-details" >
+        
+        <div class ="row" >
+    
+         
+    
+         
+    
+        <div class="col-xl-5">
+            <h3>Total price : Rs.{{ calculateTotalPriceById(item.id) }}</h3>
+            <br>
+            <h6>Name &nbsp; : &nbsp;{{item.name}}</h6>
+            <h6>E-mail &nbsp; :&nbsp; {{item.email}} </h6>
+            <h6>PhoneNumber :&nbsp; {{item.phoneNumber}} </h6>
+            <h6>Address &nbsp; :&nbsp; {{item.address}}</h6>
+            <h6>Road &nbsp;:&nbsp; {{item.road}}</h6>
+        </div>
+    
+    
+       
+        <div class="col-xl-4">
+            <h4 class="invoiceNo"> Invoice No {{item.id}}</h4>
+            <br>
+        </div>
+            <div class="col-xl-3">
+            <h6>Date:{{item.createdDate}}</h6>
+            <h6>Time:{{item.createdTime}}</h6>
+           
+        </div>
+    
+        <div class="row under">
+        <div class="col-xl-12">
+            <table style="border: 1px solid;">
+                <tr>
+                <th>Items </th>
+                <th>Size</th>
+                <th>Quntity</th>
+                <th>price</th>
+                <th>SubTotal</th>
+                </tr>
+                <tr *ngFor="let product of item.products">
+                    <td>{{product.name}}</td>
+                    <td>{{product.size}}</td>
+                    <td> {{product.quantity}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.quantity * product.price}}</td>
+    
+                </tr>
+               
+            </table>
+          
+        </div> 
+<br><br>
+       
+        
+    </div>
+        </div>
+
+
+
+</div>

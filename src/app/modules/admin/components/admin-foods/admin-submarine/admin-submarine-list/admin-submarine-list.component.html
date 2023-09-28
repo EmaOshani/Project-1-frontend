@@ -1,0 +1,53 @@
+<br> <br>
+
+
+
+<button class="button" (click)=" createSubmarine()">
+    <span class="button_lg">
+        <span class="button_sl"></span>
+            <span class="button_text">Add New Item</span>
+              </span>
+</button>
+<br> <br>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+ <div class="container" >
+
+ <div class="row justify-content-center"  >
+     <div *ngFor="let submarines of submarines"class="col-md-6 col-lg-4 mb-30" >
+      
+         <div class="team-item" >
+             
+             <div class="mb-30 position-relative d-flex align-items-center">
+                
+                     
+                     
+                     <span class="img-holder d-inline-block">
+                         <img [src]= "submarines.imageURL"  (click)="detailsSubmarine(submarines.id)" alt="" class="img-responsive" style="max-height: 200px;">
+                        
+                     </span>
+             </div>
+      
+            <div class="team-content">
+                 <h5 class="mb-2" > {{submarines.name}}</h5>
+                 <p class="text-uppercase mb-0">rs.{{submarines.price}}</p>
+                 <p class="text-uppercase mb-0">{{submarines.details}}</p>
+              
+             </div>
+
+         
+                 <ul class="wrapper">
+                    <li class="icon facebook" (click)="updateSubmarine(submarines.id)">
+                        <span class="tooltip">Edit</span>
+                        <span ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                    </li>
+                    <li class="icon twitter" (click)="DeleteBox(submarines.id)">
+                        <span class="tooltip">Delete</span>
+                        <span> <i class="fa fa-trash" aria-hidden="true"></i></span>
+                    </li>
+                 </ul>
+         </div>
+     </div>
+     </div>
+ </div>  
+
+ 

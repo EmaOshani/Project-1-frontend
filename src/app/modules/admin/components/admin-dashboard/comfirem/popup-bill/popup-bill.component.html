@@ -1,0 +1,78 @@
+
+  
+  <table>
+    <tbody><tr>
+        <td></td>
+        <td class="container" width="600">
+            <div class="content">
+                <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                    <tbody  #popupContent><tr>
+                        <td class="content-wrap aligncenter">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tbody><tr>
+                                    <td class="content-block">
+                                        <h3>Real Pizza Resturant</h3>
+                                        <h6>Address 4/A, Hanwella Road Kirindiwela</h6>
+                                        <h6>Hotline 0774507001 / 0112256390</h6>
+                                        <h6>Fax 0332205000</h6>
+
+
+                                    </td>
+                                </tr>
+                               <tr>
+                                    
+                                    <td class="content-block">
+                                        <table class="invoice">
+                                            <tbody><tr>
+                                                <td>Invoice No:{{bill.id}} <br>Customer Name : {{bill.name}}<br>Address : {{bill. address}}<br>Road : {{bill.road}}<br>Phone Number : {{bill.phoneNumber}}</td>
+                                            </tr>
+                                            <br>
+                                            <tr>
+                                                <td>
+                                                    <table class="invoice-items"  cellpaddding="0"  cellspacing="0" >
+                                                        <tr>
+                                                            <th>Items </th>
+                                                            <th>Quntity</th>
+                                                            <th>Size</th>
+                                                            <th>price</th>
+                                                            <th>SubTotal</th>
+                                                            </tr>
+                                                     <tr *ngFor="let product of bill.products" >
+                                                        <td>{{product.name}}</td>
+                                                        <td> {{product.quantity}}</td>
+                                                        <td>{{product.size}}</td>&nbsp;
+                                                        <td>{{product.price}}</td>
+                                                        <td>{{product.quantity  * product.price}}</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <td style="font-weight:bold;">Add Delivary Charge : Rs.250.00</td>
+                                                    <td style="font-weight: bold;">Total price : Rs.{{250+ calculateTotalPriceById(bill.id)}}</td>
+                                                         
+                                                    
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                  
+                                </tr>
+                               
+                                
+                                </tbody>
+                            </table>
+                                </tr>
+                            </tbody></table>
+                     
+                 
+                 
+                
+             </div>
+        </td>
+        <td></td>
+    </tr>
+</tbody></table>
+<div class="col-md-9">
+
+    <button class="custom-btn btn-1" (click)="downloadAsPDF()">Download</button>
+</div>
+<br>

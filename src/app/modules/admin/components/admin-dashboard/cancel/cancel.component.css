@@ -1,0 +1,184 @@
+
+body {
+    background-image: url('https://wallpapertag.com/wallpaper/middle/3/7/6/174164-download-free-dark-grey-background-1920x1080-computer.jpg');
+    
+    height: 900px;}
+
+    
+    .card {
+        margin-left: 40px;
+        margin-top: 2%;
+        width: 90%;
+        border-radius: 20px;
+        background: #853333;
+        position: relative;
+        padding: 1.8rem;
+        border: 2px solid #c3c6ce;
+        transition: 0.5s ease-out;
+        overflow: visible;
+       }
+       
+       .card-details {
+        padding: 20px , 20px , 20px , 20px;
+        color: rgb(255, 255, 255);
+        height: 100%;
+        gap: .5em;
+        place-content: center;
+        font-weight: 700;
+       }
+
+
+       /* button*/
+       
+         .card-button {
+        
+        text-align: center;
+        transform: translate(-50%, 125%);
+        width: 15%;
+        border-radius: 90px;
+        border: none;
+        background-color: #ff0000;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        padding: .5rem 1rem;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.3s ease-out;
+       }  
+
+
+     
+
+       .card-button:hover {
+        transform: translate(-50%, 125%);
+        width: 15%;
+        border-radius: 30px;
+        border: none;
+        background-color: #8c0000;
+        color: #fff;
+        font-size: 14px;
+        padding: .5rem 1rem;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        opacity: 0;
+        transition: 0.3s ease-out;
+       }  
+
+
+   
+
+
+
+
+
+       
+       .text-body {
+        color: rgb(134, 134, 134);
+       }
+       
+       /*Text*/
+       .text-title {
+        font-size: 1.5em;
+        font-weight: bold;
+       }
+    
+       
+
+     table
+
+       th{
+        width: 250px;
+        text-align: center;
+        color: #000000;
+       }
+
+       td{
+        width: 250px;
+        text-align: center;
+        
+       }
+
+
+     /*   @keyframes colorAnimation {
+        0% {
+          color: rgb(255, 0, 0);
+        }
+        50% {
+          color: rgb(255, 255, 255);
+        }
+        100% {
+          color: rgb(255, 0, 0);
+        }
+      }
+      
+      p {
+        animation-name: colorAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+      }
+
+ */
+      .invoiceNo{
+
+    color: #000000;
+      }
+
+      h1{
+        color: #000000;
+        text-align: center;
+      }
+
+
+      .under{
+        margin-top: 30px;
+        margin-bottom: -20px;
+      }
+
+      .btn2{
+        position: relative;
+        font-size: 17px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1em 2.5em;
+        display: inline-block;
+        border-radius: 6em;
+        transition: all .2s;
+        border: none;
+        font-family: inherit;
+        font-weight: 500;
+        color: black;
+        background-color: rgb(67, 90, 139);
+       }
+       
+       
+       
+       .btn2:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+       }
+       
+       .btn2::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+       }
+       
+       .btn2::after {
+        background-color: #d44949;
+       }
+       
+       .btn2:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+       }

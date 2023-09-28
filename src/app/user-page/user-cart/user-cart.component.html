@@ -1,0 +1,88 @@
+<br><br><br>
+<section class="cart_section">
+    <div class="container" > 
+      
+      
+      <div *ngIf="getCartDetails.length === 0">
+         
+
+        <br><br><br><br>
+          
+        <h1 class="empty">Empty Cart</h1>
+        
+        <img src=" https://tokoterserah.com/images/empty-cart.gif" class="pic">
+        
+        <!-- Button -->
+        <br>
+        <button class="Btn" style="font-weight: bold;" (click)="shopbtn()">
+          Shop Now 
+        </button>
+      
+      </div>
+
+      
+
+
+
+
+      <div  *ngIf="getCartDetails.length > 0 ">
+        
+        <h2>Cart Page</h2>
+      
+        <table  style="width:100%" >
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Sub Total</th>
+              <th>Remove Items</th>
+              <th>Sizes</th>
+            </tr>
+            <tr *ngFor="let getcartDetail of getCartDetails">
+              <td>  <img [src]= "getcartDetail.imageURL"  alt="" class="img-responsive" width="140px" height="140px"></td>
+              <td>{{getcartDetail.name}}</td>
+              <td>Rs.{{getcartDetail.price}}</td>
+
+              <!-- quntity-->
+              <td>
+                <button class="btn btn-danger" (click)="incQnt(getcartDetail.id , getcartDetail.quantity)">+</button>
+                {{getcartDetail.quantity}}
+                <button class="btn btn-danger" (click)="decQnt(getcartDetail.id , getcartDetail.quantity)">-</button>
+              </td>
+
+              <!--sub total-->
+              <td> Rs {{ getcartDetail.price * getcartDetail.quantity}}</td>
+
+            
+            
+              <!--single item remove-->
+              <td><button class="btn btn-danger" (click)="singleDelete(getcartDetail.id)"><i class="fa fa-trash"></i></button></td>
+            
+             
+                  <!--DropDown list-->
+              <td>{{ getcartDetail.size}}</td>
+             
+            
+            
+            </tr>
+            
+          </table>
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <h4> Total Rs.{{total}}</h4>
+            </div>
+            <div class="col-md-6 text-right">
+              <button type="button" class="removeall" (click)="removeall()"><i class="fa fa-trash" ></i> Remove All</button>
+              &nbsp;
+              <!--<button class="order" a routerLink="order-page" routerLinkActive="active" > Order Now</button>-->
+              <button type="submit" class="placeorder"  [disabled]="isCartEmpty()"  (click)="placeorder()">OrderNow</button>
+            </div>
+          
+          </div>
+        
+    </div>
+  </div>
+</section>

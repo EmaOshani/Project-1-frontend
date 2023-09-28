@@ -1,0 +1,40 @@
+<br>
+<h4 class="h4"><u>Update Items</u></h4>
+<br><br>
+<div class="container">
+<form (ngSubmit)="onSubmit()" class="form">
+
+    
+        <label class="label">Food Name</label>
+        <input type="text" class="input" id = "name"
+        [(ngModel)]= "pizzas.name" name = "name" required>
+   
+
+    <div class="form-group">
+        <label class="label">Small Price</label>
+        <input type="number" class="input" id="smallprice" [(ngModel)]="pizzas.smallprice" name="smallprice" required="">
+    
+        <label class="label">Medium Price</label>
+        <input type="number" class="input" id="mediumprice" [(ngModel)]="pizzas.mediumprice" name="mediumprice" required="">
+    
+        <label class="label">Large Price</label>
+        <input type="number" class="input" id="largeprice" [(ngModel)]="pizzas.largeprice" name="largeprice" required="">
+       
+    </div>
+
+    
+        <label class="label">Image LINK</label>
+        <input type="text" class="input" id = "imageURL"
+        [(ngModel)]= "pizzas.imageURL" name = "imageURL" required>
+    
+  
+        <label class="label">Food Details</label>
+        <input type="text" class="input" id = "details"
+        [(ngModel)]= "pizzas.details" name = "details" required>
+    
+
+    <br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+

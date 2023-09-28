@@ -1,0 +1,49 @@
+<br>
+<div class="container">
+    <div class="row list-project">
+        <div class="col-md-7">
+            <img src= {{pizzas.imageURL}}  alt="project-image" width="500px" height="500px" class="rounded tablet-top">
+        </div>
+        <!-- / column -->
+        <div class="col-md-5">
+            <div class="project-info-box mt-0">
+                <h5>{{pizzas.name}}</h5>
+              
+                <p>{{pizzas.details}}</p>
+            </div>
+            <!-- / project-info-box -->
+
+            <div class="project-info-box mb-10">
+                <p><b>Food Size :</b> {{selectedSize  ? selectedSize : 'size not selected' }} </p>
+                <p><b>Food Price :</b> {{selectedPrice ? selectedPrice : 'price not selected'}} </p>
+                
+            </div>
+
+            <div class="project-info-box mb-10" >
+                <p><b>Please select you want size of Pizza:</b> 
+                    <div class="col-xm-8" >
+                  <button (click)="selectSize('small', pizzas.smallprice )">
+                      <span class="button_top">Small Rs. {{pizzas.smallprice}}</span>
+                  </button><br>
+                    </div>
+                    <div class="col-xm-8" >
+                  <button (click)="selectSize('medium', pizzas.mediumprice)">
+                      <span class="button_top">Medium Rs. {{ pizzas.mediumprice }}</span>
+                  </button>
+                    </div>
+                    <div class="col-xm-8" >
+                  <button (click)="selectSize('large', pizzas.largeprice)">
+                      <span class="button_top">Large Rs. {{ pizzas.largeprice }}</span>
+                  </button>
+                  </div>
+                
+            </div>
+
+           
+            
+        </div>
+        <!-- / column -->
+    </div>
+    <!-- / row list-project -->
+
+    

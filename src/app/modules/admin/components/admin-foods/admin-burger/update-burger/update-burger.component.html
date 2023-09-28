@@ -1,0 +1,31 @@
+<br>
+<h4 class="h4"><u>Update Items</u></h4>
+<br>
+<div class="container">
+<form (ngSubmit)="onSubmit()" class="form" [formGroup]="itemForm">
+
+    
+        <label class="label">Food Name</label>
+        <input type="text" name="name" formControlName="name" [(ngModel)]="burgers.name" class="input" >
+        <div *ngIf="itemForm.get('name')?.errors?.['required'] && itemForm.get('name')?.touched" class="error-message">Name is required.</div>
+   
+
+    
+        <label class="label">Price</label>
+        <input type="text" name="price" formControlName="price" [(ngModel)]="burgers.price" class="input" >
+        <div *ngIf="itemForm.get('price')?.errors?.['required'] && itemForm.get('price')?.touched" class="error-message">Price is required.</div>
+  
+    
+        <label class="label">Image LINK</label>
+        <textarea name="imageUrl" formControlName="imageUrl" [(ngModel)]="burgers.imageURL" class="input" rows="5"></textarea>
+        <div *ngIf="itemForm.get('imageUrl')?.errors?.['required'] && itemForm.get('imageUrl')?.touched" class="error-message">imageUrl is required.</div>
+  
+        <label class="label">Food Details</label>
+        <textarea name="details" formControlName="details" [(ngModel)]="burgers.details" class="input" rows="5"></textarea>
+        <div *ngIf="itemForm.get('details')?.errors?.['required'] && itemForm.get('details')?.touched" class="error-message">Details are required.</div>
+
+    <br>
+    <button type="submit" [disabled]="itemForm.invalid" [ngClass]="{ 'invalid-button': itemForm.invalid }">Submit</button>
+</form>
+</div>
+

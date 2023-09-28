@@ -1,0 +1,59 @@
+ 
+<br>
+<h4 class="h4"><u>Add New Item</u></h4>
+<br><br><br>
+<div class="container">
+
+<form (ngSubmit)="onSubmit()" class="form" [formGroup]="pizzasForm">
+
+    
+    <label class="label"> Food Name</label>
+    <input type="text" name="name" [(ngModel)]="pizzas.name" class="input" placeholder="Enter the name" formControlName="name" [ngClass]="{ 'error-input': pizzasForm.get('name')?.invalid && pizzasForm.get('name')?.touched }">
+    <div *ngIf="pizzasForm.get('name')?.errors?.['required'] && pizzasForm.get('name')?.touched" class="error-message">Name is required.</div>
+       
+       
+        <label class="label">Small Price</label>
+        <input type="number" name="smallprice" [(ngModel)]="pizzas.smallprice" class="input" placeholder="Enter the price" formControlName="smallprice" [ngClass]="{ 'error-input': pizzasForm.get('smallprice')?.invalid && pizzasForm.get('smallprice')?.touched }">
+        <div *ngIf="pizzasForm.get('smallprice')?.errors?.['required'] && pizzasForm.get('smallprice')?.touched">
+            <small class="error-message">Price is required.</small>
+        </div>
+    
+        
+
+        <label class="label">Medium Price</label>
+        <input type="number" name="mediumprice" [(ngModel)]="pizzas.mediumprice" class="input" formControlName="mediumprice" [ngClass]="{ 'error-input': pizzasForm.get('mediumprice')?.invalid && pizzasForm.get('mediumprice')?.touched }">
+        <div *ngIf="pizzasForm.get('mediumprice')?.errors?.['required'] && pizzasForm.get('mediumprice')?.touched">
+            <small class="error-message">Price is required.</small>
+        </div>
+       
+     
+        <label class="label">Large Price</label>
+        <input type="number" name="largeprice" [(ngModel)]="pizzas.largeprice" class="input"  formControlName="largeprice" [ngClass]="{ 'error-input': pizzasForm.get('largeprice')?.invalid && pizzasForm.get('largeprice')?.touched }">
+        <div *ngIf="pizzasForm.get('largeprice')?.errors?.['required'] && pizzasForm.get('largeprice')?.touched">
+            <small class="error-message">Price is required.</small>
+        </div>
+      
+
+
+        <label class="label">Image LINK</label>
+        <textarea name="imageURL" [(ngModel)]="pizzas.imageURL" class="input" rows="5" formControlName="imageURL" [ngClass]="{ 'error-input': pizzasForm.get('imageURL')?.invalid && pizzasForm.get('imageURL')?.touched }"></textarea>
+        <div *ngIf="pizzasForm.get('imageURL')?.errors?.['required'] && pizzasForm.get('imageURL')?.touched">
+            <small class="error-message">imageUrl is required.</small>
+        </div>
+       
+ 
+        <label class="label">Food Details</label>
+        <textarea name="details" [(ngModel)]="pizzas.details" class="input" rows="5" formControlName="details" [ngClass]="{ 'error-input': pizzasForm.get('details')?.invalid && pizzasForm.get('details')?.touched }"></textarea>
+        <div *ngIf="pizzasForm.get('details')?.errors?.['required'] && pizzasForm.get('details')?.touched">
+            <small class="error-message">Details are required.</small>
+        </div>
+    
+
+    <br>
+    <button type="submit" [ngClass]="{ 'invalid-button': pizzasForm.invalid }" [disabled]="pizzasForm.invalid">SUBMIT</button>
+</form>
+<br><br><br><br><br><br><br><br><br>
+
+ 
+
+

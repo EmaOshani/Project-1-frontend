@@ -1,0 +1,93 @@
+
+
+
+
+
+<br><br>
+<h1>CONFIRMED ORDERS</h1>
+<br>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<div class="container">
+    <div class="input-row">
+        <div class="input-wrapper">
+            <label class="userName">Invoice No  &nbsp;</label>
+            <input type="text" class="input" name="search" type="text" [(ngModel)]="invoiceNumber" (input)="applyInvoiceFilter()">
+          </div>
+          <br>
+      <div class="input-wrapper">
+        <label class="userName">Date  &nbsp;&nbsp;</label> &nbsp; &nbsp; &nbsp; &nbsp;
+        <input id="date" class="input" name="date" type="date" [(ngModel)]="selectedDate" (change)="applyDateFilter()">
+      </div> 
+    
+    </div>
+
+
+
+
+
+ 
+   
+ 
+<div class="card" *ngFor="let item of filteredItems"  >
+    <div class="card-details" >
+    
+    <div class ="row" >
+
+     
+
+     
+
+    <div class="col-xl-5">
+        <h3>Total price : Rs {{ calculateTotalPriceById(item.id) }}</h3>
+        <br>
+        <h6>name :&nbsp;&nbsp; &nbsp;{{item.name}}</h6>
+        <h6>email :&nbsp; {{item.email}} </h6>
+        <h6>Phone Number  :&nbsp;&nbsp; :&nbsp; {{item.phoneNumber}} </h6>
+        <h6>Address : &nbsp;&nbsp;&nbsp;&nbsp; {{item.address}}</h6>
+        <h6>Road : &nbsp; {{item.road}}</h6>
+    </div>
+
+
+    <div class="col-xl-4">
+        <h4 class="invoiceNo"> Invoice No {{item.id}}</h4>
+        <br>
+    </div>
+        <div class="col-xl-3">
+        <h6>Date :{{item.createdDate}}</h6>
+        <h6>Time :{{item.createdTime}}</h6>
+      
+      </div>
+
+    <div class="col-xl-12">
+        <table style="border: 1px solid;">
+            <tr>
+            <th>Items </th>
+            <th>Size</th>
+            <th>Quntity</th>
+            <th>price</th>
+            <th>SubTotal</th>
+            </tr>
+            <tr *ngFor="let product of item.products">
+                <td>{{product.name}}</td>
+                <td>{{product.size}}</td>
+                <td> {{product.quantity}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.quantity * product.price}}</td>
+
+            </tr>
+           
+        </table>
+        
+    </div>
+
+    </div>
+</div>
+  
+<br>
+<button class="button" type="button" (click)="genarateBill(item.id)">
+    <span class="button__text" >Genarate Bill</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+  </button>
+</div>

@@ -1,0 +1,77 @@
+
+<br>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-1" >
+       <div class="col" (click)=" pendingOrder()">
+		 <div class="card radius-10 border-start border-0 border-3 border-info">
+			<div class="card-body">
+				<div class="d-flex align-items-center" >
+					<div>
+                       <button class="btn" >					
+						<p class="mb-0 text-secondary" >Pending Order</p>
+						<h4 class="my-1 text-info">{{PendingCount}}</h4>
+					   </button>
+						
+						
+					</div>
+					<div class="widgets-icons-2 rounded-circle bg-gradient-scooter text-white ms-auto" ><i class="fa fa-eye" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		 </div>
+	   </div>
+	   <div class="col" (click)=" comfiremOrder()">
+		<div class="card radius-10 border-start border-0 border-3 border-danger">
+		   <div class="card-body">
+			   <div class="d-flex align-items-center">
+				   <div>
+					<button class="btn">
+					   <p class="mb-0 text-secondary">Comfirem Order</p>
+					   <h4 class="my-1 text-danger"> {{ConfirmeCount}}</h4>
+					</button>
+				   </div>
+				   <div class="widgets-icons-2 rounded-circle bg-gradient-bloody text-white ms-auto"><i class="fa fa-dollar"></i>
+				   </div>
+			   </div>
+		   </div>
+		</div>
+	  </div>
+	  <div class="col" (click)="cancelOrder()">
+		<div class="card radius-10 border-start border-0 border-3 border-success">
+		   <div class="card-body">
+			   <div class="d-flex align-items-center" (click)="cancelOrder()">
+				   <div>
+					<button class="btn">
+					   <p class="mb-0 text-secondary">Cancel Order</p>
+					   <h4 class="my-1 text-success"> {{cancelCount}} </h4>
+					</button>
+				   </div>
+				   <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto"><i class="fa fa-window-close"></i>
+				   </div>
+			   </div>
+		   </div>
+		</div>
+	  </div>
+
+	  <div class="col" (click)=" onreport()">
+		<div class="card radius-10 border-start border-0 border-3 border-danger ">
+		   <div class="card-body">
+			   <div class="d-flex align-items-center">
+				   <div>
+					<button class="btn">
+					   <p class="mb-0 text-secondary">Sells Report</p>
+					   <h4 class="my-1 text-danger">Rs{{calculateTotalIncome()}}</h4>
+					</button>
+				   </div>
+				   <div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto"><i class="fa fa-check-circle-o" aria-hidden="true"></i>
+				   </div>
+			   </div>
+		   </div>
+		</div>
+	  </div>
+	 
+	</div>
+</div>
+

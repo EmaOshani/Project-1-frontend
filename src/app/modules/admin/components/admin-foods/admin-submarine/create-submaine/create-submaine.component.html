@@ -1,0 +1,55 @@
+
+<br>
+<h4 class="h4"><u>Add New Item</u></h4>
+<div class="container">
+
+<form (ngSubmit)="onSubmit()" class="form" [formGroup]="itemForm">
+
+    <label class="label"> Food category</label>
+    <select class="input" type="text" formControlName="item"
+    [(ngModel)]= "submarines.item" name = "item">
+    <option value="" disabled selected>Select category</option>
+    <option value="Burger">Burger</option>
+    <option value="Submarine">Submarine</option>
+    <option value="Crispy Chicken">Crispy Chicken</option>
+    <option value="Beverages" >Beverages</option>
+    <option value="Desserts">Desserts</option>
+    <div *ngIf="itemForm.get('item')?.errors?.['required'] && itemForm.get('item')?.touched" class="error-message">
+        Food category is required.
+      </div>
+    
+</select>
+
+    
+    <label class="label"> Food Name</label>
+    <input type="text" class="input" id = "name"
+    [(ngModel)]= "submarines.name" name = "name" formControlName="name" [ngClass]="{ 'error-input': itemForm.get('name')?.invalid && itemForm.get('name')?.touched }">
+    <div *ngIf="itemForm.get('name')?.errors?.['required'] && itemForm.get('name')?.touched" class="error-message">Name is required.</div>
+        
+
+        <label class="label">Price</label>
+        <input type="number" class="input" id = "largeprice"
+        [(ngModel)]= "submarines.price" name = "price" formControlName="price" [ngClass]="{ 'error-input': itemForm.get('price')?.invalid && itemForm.get('price')?.touched }">
+        <div *ngIf="itemForm.get('price')?.errors?.['required'] && itemForm.get('price')?.touched">
+        <small class="error-message">Price is required.</small>
+        </div>
+       
+        <label class="label">Image LINK</label>
+        <input type="text" class="input" id = "imageURL"
+        [(ngModel)]= "submarines.imageURL" name = "imageURL"  rows="5" formControlName="imageUrl" [ngClass]="{ 'error-input': itemForm.get('imageUrl')?.invalid && itemForm.get('imageUrl')?.touched }">
+        <div *ngIf="itemForm.get('imageUrl')?.errors?.['required'] && itemForm.get('imageUrl')?.touched">
+            <small class="error-message">imageUrl is required.</small></div>
+       
+ 
+        <label class="label">Food Details</label>
+        <input type="text" class="input" id = "details"
+        [(ngModel)]= "submarines.details" name = "details" rows="5" formControlName="details" [ngClass]="{ 'error-input': itemForm.get('details')?.invalid && itemForm.get('details')?.touched }">
+        <div *ngIf="itemForm.get('details')?.errors?.['required'] && itemForm.get('details')?.touched">
+            <small class="error-message">Details are required.</small>
+        </div>
+
+    <br>
+    <button type="submit" [ngClass]="{ 'invalid-button': itemForm.invalid }" [disabled]="itemForm.invalid">SUBMIT</button>
+</form>
+</div>
+
